@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  size: 62.5%;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(330deg, #4b0000 25%, #9b111e 70%, #ef233c 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.bienvenido {
+  height: 15vh;
+  width: 90%;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.bienvenido h1 {
+  color: #ffd60a;
+  font-size: 8vh;
+  animation: bienvenida 5s ease-in-out infinite alternate-reverse;
+}
+
+.formulario {
+  background: linear-gradient(145deg, #000000 0%, #2a0000 50%, #550000 100%);
+  height: 70vh;
+  width: 30rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 6fr 1fr;
+  grid-template-areas:
+    "nombre email"
+    "mensaje mensaje"
+    "boton boton";
+  border-radius: 20px;
+  border: 3px #000000 solid;
+  justify-self: center;
+  align-self: center;
+  margin: 2rem;
+}
+
+.nombre {
+  color: #600000;
+  height: 3rem;
+  width: 10rem;
+  grid-area: nombre;
+  display: flex;
+  justify-self: start;
+  align-self: center;
+  margin: 1rem;
+  border: 3px #000000 solid;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.email {
+  font-size: 1.2rem;
+  height: 3rem;
+  width: 10rem;
+  grid-area: email;
+  display: flex;
+  justify-self: end;
+  align-self: center;
+  margin: 1rem;
+  border: 3px #000000 solid;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.mensaje {
+  font-size: 1.2rem;
+  height: auto;
+  width: auto;
+  grid-area: mensaje;
+  margin: 1rem;
+  border: 3px #000000 solid;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.boton {
+  grid-area: boton;
+  color: rgb(87, 90, 102);
+  height: 3rem;
+  width: 10rem;
+  border: 3px #000000 solid;
+  border-radius: 10px;
+  display: flex;
+  justify-self: self-end;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  margin: 1rem;
+}
+
+@keyframes bienvenida {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 30rem) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden !important;
+  }
+
+  .bienvenido h1 {
+    margin: 0rem;
+    width: 90vw;
+    height: 10vh;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formulario {
+    margin-top: 0;
+    margin-bottom: 5rem;
+    width: 90vw;
+    height: 70vh;
+  }
+
+  .nombre {
+    width: 35vw;
+    height: 7vh;
+  }
+
+  .email {
+    width: 35vw;
+    height: 7vh;
+  }
+
+  .boton {
+    justify-self: center;
+    height: 7vh;
+    width: 80vw;
+  }
+}
