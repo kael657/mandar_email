@@ -18,10 +18,10 @@ class contacto(BaseModel) :
     mensaje : str 
 
 @app.post("/enviar-correo") 
-async def guardar(datos : contacto) : 
-    fecha = datetime.now().strftime("%Y-%m-%d %H:%M")
-    linea = f"[{fecha}] {datos.nombre} {datos.email}: {datos.mensaje}\n"
-    return {"status": "success", "message": "Datos guardados"}
+#async def guardar(datos : contacto) : 
+#    fecha = datetime.now().strftime("%Y-%m-%d %H:%M")
+#    linea = f"[{fecha}] {datos.nombre} {datos.email}: {datos.mensaje}\n"
+#    return {"status": "success", "message": "Datos guardados"}
 
 #    with open("base_de_datos.txt", "a", encoding="utf-8") as f:
 #        f.write(linea)
