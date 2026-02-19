@@ -25,7 +25,7 @@ function Formulario() {
 
     setCargando(true);
     try {
-      const respuesta = await fetch("http://127.0.0.1:8000/enviar-correo", {
+      const respuesta = await fetch("https://mandar-email.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
