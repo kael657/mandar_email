@@ -9,7 +9,7 @@ html {
 body {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(330deg, #4b0000 25%, #9b111e 70%, #ef233c 100%);
+  background: linear-gradient(145deg, #ffa500 0%, #ffff00 100%);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -31,7 +31,7 @@ body {
 }
 
 .formulario {
-  background: linear-gradient(145deg, #ffa500 0%, #ffff00 100%);
+  background: linear-gradient(145deg, #000000 0%, #2a0000 50%, #550000 100%);
   height: 70vh;
   width: 30rem;
   display: grid;
